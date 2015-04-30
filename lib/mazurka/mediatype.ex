@@ -10,7 +10,7 @@ defmodule Mazurka.Mediatype do
 
     case apply(parser, :parse, [chars, opts]) do
       {:ok, ast} ->
-        {:ok, ast}
+        {:ok, ast, parser}
       {:error, {eline, _, {:illegal, token}}} ->
         raise SyntaxError, {eline, file, {line, contents}, "illegal token: #{token}"}
       {:error, {eline, _, [error, token]}} ->

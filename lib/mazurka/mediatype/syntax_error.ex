@@ -41,6 +41,7 @@ defmodule Mazurka.Mediatype.SyntaxError do
       0 -> line
       1 -> " #{line}"
       2 -> "  #{line}"
+      _ -> line
     end
   end
 end
