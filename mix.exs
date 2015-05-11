@@ -15,7 +15,7 @@ defmodule MazurkaMediatype.Mixfile do
   end
 
   defp deps do
-    []
+    [{:etude, "=> 0.1.0"}]
   end
 
   defp package do
