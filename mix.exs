@@ -3,7 +3,7 @@ defmodule MazurkaMediatype.Mixfile do
 
   def project do
     [app: :mazurka_mediatype,
-     version: "0.1.3",
+     version: "0.2.0",
      elixir: "~> 1.0",
      description: "mazurka mediatype interface",
      package: package,
