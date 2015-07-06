@@ -1,4 +1,4 @@
-defmodule Mazurka.Mediatype.Plaintext do
+defmodule Mazurka.Mediatype.Parser.Plaintext do
   def parse(src, _opts \\ []) do
     {:ok, [to_string(src)]}
   end

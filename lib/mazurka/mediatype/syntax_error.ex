@@ -1,4 +1,4 @@
-defmodule Mazurka.Mediatype.SyntaxError do
+defmodule Mazurka.Mediatype.Parser.SyntaxError do
   defexception [:line, :file, :contents, :msg]
 
   def exception({line, file, contents, message}) do

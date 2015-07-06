@@ -1,5 +1,5 @@
-defmodule Mazurka.Mediatype do
-  alias Mazurka.Mediatype.SyntaxError
+defmodule Mazurka.Mediatype.Parser do
+  alias Mazurka.Mediatype.Parser.SyntaxError
 
   def parse(line, file, contents, mediatypes) do
     parser = find_valid_parser(mediatypes)
@@ -26,7 +26,7 @@ defmodule Mazurka.Mediatype do
     |> Enum.reduce([], fn
       (name, acc) when is_binary(name) ->
         name = String.capitalize(name) |> String.replace("+", "")
-        [Module.concat([name]), Module.concat(["Mazurka.Mediatype", name]) | acc]
+        [Module.concat([name]), Module.concat(["Mazurka.Mediatype.Parser", name]) | acc]
       (name, acc) ->
         [name | acc]
     end)
